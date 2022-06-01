@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -21,5 +23,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();*/
+
+app.MapGet("/observation/{zip}", (string zip, [FromQuery] int? days) => { 
+    return Results.Ok(zip);
+});
 
 app.Run();
