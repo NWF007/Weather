@@ -14,7 +14,7 @@ namespace CloudWeather.Precipitation.DataAccess
 
         }
 
-        public DbSet<Percipitation> Percipitations { get; set; }
+        public DbSet<Precipitation> Percipitations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace CloudWeather.Precipitation.DataAccess
 
         private void SnakeCaseIdentityTableNames(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Percipitation>(b => { b.ToTable("percipitation"); });
+            modelBuilder.Entity<Precipitation>(b => { b.ToTable("percipitation"); });
         }
     }
 }

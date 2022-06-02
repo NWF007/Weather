@@ -1,6 +1,6 @@
 ﻿namespace CloudWeather.Precipitation.DataAccess
 {
-    public class Percipitation
+    public class Precipitation
     {
         public Guid Id { get; set; }
         public DateTime CreatedOn { get; set; }
